@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/hash.svg"
+      type="image/x-icon"
+    />
+    <!-- jQuery UI Dialog - Default funtionality -->
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <title>Jogo da velha</title>
+  </head>
+  <body>
+    <div id="title">
+      <img src="./assets/img/title.png" alt="title" class="head-title" />
+    </div>
+
+    <form class="gameHash" name="game">
+      <!-- FIRST PLAYER -->
+      <div class="gamer">
+        <label for="player" id="text">
+          Player one
+          <input type="text" name="X" id="player" maxlength="15" />
+        </label>
+      </div>
+      <!-- SECOND PLAYER -->
+      <div class="gamer2">
+        <label for="player2" id="text">
+          Player two
+          <input type="text" name="O" id="player2" maxlength="15" />
+        </label>
+      </div>
+      <div class="board">
+        <input type="button" name="block" value="" onclick="process(0)" />
+        <input type="button" name="block" value="" onclick="process(1)" />
+        <input type="button" name="block" value="" onclick="process(2)" />
+        <input type="button" name="block" value="" onclick="process(3)" />
+        <input type="button" name="block" value="" onclick="process(4)" />
+        <input type="button" name="block" value="" onclick="process(5)" />
+        <input type="button" name="block" value="" onclick="process(6)" />
+        <input type="button" name="block" value="" onclick="process(7)" />
+        <input type="button" name="block" value="" onclick="process(8)" />
+      </div>
+      <div class="btn">
+        <input type="button" value="Start Again" onclick="reboot()" />
+      </div>
+    </form>
+    <div id="dialog" class="gif" title="You Win!">
+      <p>Enjoy your moment!</p>
+      <img
+        src="./assets/img/street.gif"
+        alt="Placeholder Image"
+        width="270px"
+        height="250px"
+      />
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
